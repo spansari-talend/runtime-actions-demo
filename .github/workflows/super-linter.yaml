@@ -15,3 +15,25 @@ jobs:
         env: 
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: single line
+        run: echo Hello,world!
+      
+      - name: list all the original file
+        run: ls
+
+      - name: install python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.8'
+      
+      - name: run script of python
+        run: python file.py
+        
+      - name: list the updates files
+        run: ls
+      
+        # install python
+        # create a file
+        # list the files again
+      
